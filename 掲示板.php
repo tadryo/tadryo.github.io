@@ -8,7 +8,7 @@
 $log_dir = __DIR__ . '/data';
 $log_filename = 'log.json';
 $log_path = $log_dir . '/' . $log_filename;
-$title_for_page = '何かすごい掲示板';
+$title_for_page = '掲示板';
 //ログファイルが存在すれば読み込む
 if (file_exists($log_path)) {
     $messages = json_decode(file_get_contents($log_path), true);
