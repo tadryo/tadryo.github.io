@@ -1,0 +1,35 @@
+body { background:url(img/mbltx_new.jpg); }
+input { width: 50pt; }
+.lyrics { font-size: 12pt; }
+.line { font-size: 12pt; height: 20pt; }
+.line_title { line-height:20pt; vertical-align:middle; }
+/*  font-family: "ＭＳ 明朝"; font-size: 18pt; */
+.debug { color: #aaaaaa; }
+.keyword { color: #ffaaaa; }
+.tablehead { color: #aaaaff; }
+
+.artcl {
+/* float: left; */
+ width: 60px;
+ background-color: #336699;
+ border-style: solid;
+ border-color: #330033;
+ border-width: 2px 1px 1px 4px;
+ padding:  3px 6px;
+ color: #ffffff;
+ margin: 4px 5px;
+ font-size: small;
+}
+
+.compobox {
+ background-color: #d9d9dd;
+/*  background-image: url(../content/img/compo.png); */
+/* background-position: left; */
+ background-repeat: repeat-y;
+ width: 560px;
+ border-style: solid;
+ border-color: #f6f6f6 #666666 #666666 #f6f6f6;
+ border-width: 3px 8px 4px 8px;
+ padding: 2px;
+ margin: 0px;
+}
