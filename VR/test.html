@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame</title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  </head>
+  <body>
+
+    <a-scene background="color: gray">
+      <a-entity
+        position="0 -1 -4"
+        geometry="primitive: plane; width: 5"
+        material="color: #EF2D5E"
+        text="color: white; align: center; font: dejavu;
+              value: Congratulations to\nthe most beautiful couple!;">
+        <a-animation begin="click" attribute="scale" dur="500" easing="ease-in-sine" to="2 2 2"></a-animation>
+        <a-animation begin="mouseleave" attribute="scale" delay="500" to="1 1 1"></a-animation>
+      </a-entity>
+
+      <a-entity camera look-controls wasd-controls>
+        <a-entity cursor="fuse: true;"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat">
+            <a-animation begin="click" easing="ease-in" attribute="scale" dur="150"
+               fill="forwards" from="0.1 0.1 0.1" to="1 1 1"></a-animation>
+            <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500"
+               fill="backwards" from="1 1 1" to="0.1 0.1 0.1"></a-animation>
+        </a-entity>
+      </a-entity>
+  </a-scene>
+  </body>
+</html>
