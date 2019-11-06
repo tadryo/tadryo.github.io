@@ -13,6 +13,15 @@
   table.diff td {
     border: solid 1px #000000;
   }
+  table td.icon{
+    background-size: 35px;
+    background-position: left 5px center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+  }
+  table td.icon.file{
+    background-image: url(icon-file.jpg)
+  }
   </style>
 </head>
 <body>
@@ -97,79 +106,80 @@
       <td>bhv_basic_move.cpp</td>
       <td>[rcsc/common/audio_memory.h]を新たにインポート<br>
           || wm.teammatesFromBall().front()->distFromSelf() > <strong>35.0</strong>を<strong>20.0</strong>にしている<br>
+          markしたことをメッセージ<br>
           </td>
     </tr>
     <tr>
-      <td>bhv_basic_move.h</td><td></td>
+      <td>bhv_basic_move.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_basic_offensive_kick.cpp</td><td></td>
+      <td>bhv_basic_offensive_kick.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_basic_offensive_kick.h</td><td></td>
+      <td>bhv_basic_offensive_kick.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_basic_tackle.cpp</td><td></td>
+      <td>bhv_basic_tackle.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_basic_tackle.h</td><td></td>
+      <td>bhv_basic_tackle.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_custom_before_kick_off.cpp</td><td></td>
+      <td>bhv_custom_before_kick_off.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_custom_before_kick_off.h</td><td></td>
+      <td>bhv_custom_before_kick_off.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_go_to_static_ball.cpp</td><td></td>
+      <td>bhv_go_to_static_ball.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_go_to_static_ball.h</td><td></td>
+      <td>bhv_go_to_static_ball.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_goalie_basic_move.cpp</td><td></td>
+      <td>bhv_goalie_basic_move.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_goalie_basic_move.h</td><td></td>
+      <td>bhv_goalie_basic_move.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_goalie_chase_ball.cpp</td><td></td>
+      <td>bhv_goalie_chase_ball.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_goalie_chase_ball.h</td><td></td>
+      <td>bhv_goalie_chase_ball.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_goalie_free_kick.cpp</td><td></td>
+      <td>bhv_goalie_free_kick.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_goalie_free_kick.h</td><td></td>
+      <td>bhv_goalie_free_kick.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_penalty_kick.cpp</td><td></td>
+      <td>bhv_penalty_kick.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_penalty_kick.h</td><td></td>
+      <td>bhv_penalty_kick.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_prepare_set_play_kick.cpp</td><td></td>
+      <td>bhv_prepare_set_play_kick.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_prepare_set_play_kick.h</td><td></td>
+      <td>bhv_prepare_set_play_kick.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_set_play_free_kick.cpp</td><td></td>
+      <td>bhv_set_play_free_kick.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_set_play_free_kick.h</td><td></td>
+      <td>bhv_set_play_free_kick.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_set_play_goal_kick.cpp</td><td></td>
+      <td>bhv_set_play_goal_kick.cpp</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_set_play_goal_kick.h</td><td></td>
+      <td>bhv_set_play_goal_kick.h</td><td>❌</td>
     </tr>
     <tr>
-      <td>bhv_set_play_indirect_free_kick.cpp</td><td></td>
+      <td>bhv_set_play_indirect_free_kick.cpp</td><td>❌</td>
     </tr>
     <tr>
       <td>bhv_set_play_indirect_free_kick.h</td><td></td>
@@ -199,7 +209,7 @@
       <td>bhv_their_goal_kick_move.h</td><td></td>
     </tr>
     <tr>
-      <td><mark><a href="chain_action.html">chain_action</a></mark></td><td></td>
+      <td class="icon file"><mark><a href="chain_action.html">chain_action</a></mark></td><td></td>
     </tr>
     <tr>
       <td>coach.conf</td><td></td>
@@ -280,16 +290,16 @@
       <td>defense_move6.h</td><td></td>
     </tr>
     <tr>
-      <td><mark><a href="formations-dt.html">formations-dt</a></mark></td><td></td>
+      <td class="icon file"><mark><a href="formations-dt.html">formations-dt</a></mark></td><td></td>
     </tr>
     <tr>
-      <td><mark><a href="formations-dt1.html">formations-dt1</a></mark></td><td></td>
+      <td class="icon file"><mark><a href="formations-dt1.html">formations-dt1</a></mark></td><td></td>
     </tr>
     <tr>
-      <td><mark><a href="formations-keeper.html">formations-keeper</a></mark></td><td></td>
+      <td class="icon file"><mark><a href="formations-keeper.html">formations-keeper</a></mark></td><td></td>
     </tr>
     <tr>
-      <td><mark><a href="formations-taker.html">formations-taker</a></mark></td><td></td>
+      <td class="icon file"><mark><a href="formations-taker.html">formations-taker</a></mark></td><td></td>
     </tr>
     <tr>
       <td>intention_receive.cpp</td><td></td>
