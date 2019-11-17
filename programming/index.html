@@ -21,10 +21,10 @@ function start(){
 
   n = 20;
   for (var i=0;i<n;i++){
-    px.push(i*20 + 50);
-    py.push(h/2)
-    vx.push(0)
-    vy.push(0)
+  px.push(i*20 + 50);
+  py.push(h/2);
+  vx.push(0);
+  vy.push(0);
   }
   dt = 0.3;
 
@@ -33,13 +33,13 @@ function start(){
 
 function step() {
   var i;
-  py[0] = mouseY
+  py[0] = mouseY;
   py[n-1] = h/2; //py[n-2]; //自由端
 
   for (i=1;i<(n-1);i++){
   var dy1 = py[i]   - py[i-1];
   var dy2 = py[i+1] - py[i];
-  var fy = dy2-dy1
+  var fy = dy2-dy1;
   if (n==12){
     fx *= 2;
     }
