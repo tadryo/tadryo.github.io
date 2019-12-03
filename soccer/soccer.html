@@ -107,6 +107,55 @@
       <td>[rcsc/common/audio_memory.h]を新たにインポート<br>
           || wm.teammatesFromBall().front()->distFromSelf() > <strong>35.0</strong>を<strong>20.0</strong>にしている<br>
           markしたことをメッセージ<br>
+          <strong>コメントアウトされているが使える(以下)。</strong><br>
+          /*   double Bhv_BasicMove::getDashPower( const PlayerAgent * agent) {		//４/１０追記<br>
+          // ローカル static 変数で回復モードを管理する<br>
+
+          static bool s_recover_mode = false;<br>
+          const WorldModel & wm = agent->world();<br>
+
+          if ( wm.self().stamina() < ServerParam::i().staminaMax() * 0.5 ) {<br>
+            s_recover_mode = true;<br>
+          }<br>
+
+          else if ( wm.self().stamina()> ServerParam::i().staminaMax() * 0.7 ) {<br>
+            s_recover_mode = false;<br>
+          }<br>
+          double dash_power = ServerParam::i().maxPower();<br>
+
+          // 1 サイクルあたりのスタミナ回復量<br>
+
+          const double my_inc= wm.self().playerType().staminaIncMax() * wm.self().recovery();<br>
+
+          if ( wm.ourDefenseLineX() > wm.self().pos().x&& wm.ball().pos().x < wm.ourDefenseLineX() + 20.0 )<br>
+          {<br>
+            // ディフェンスラインよりも後方にいる場合<br>
+            dash_power = ServerParam::i().maxPower();<br>
+          }<br>
+
+          else if ( s_recover_mode ) {<br>
+            // 回復モードでは 1 サイクル 25 以上の回復量を確保する<br>
+            dash_power = std::max( 0.0, my_inc - 25.0 );<br>
+          }<br>
+          else if ( wm.existKickableTeammate()&& wm.ball().distFromSelf() < 20.0 ) {<br>
+
+            // 味方が近くでボールを持っていれば,移動速度を早める<br>
+            dash_power = std::min( my_inc * 1.1,<br>
+            ServerParam::i().maxPower() );<br>
+          }<br>
+          else if ( wm.self().pos().x > wm.ourOffensePlayerLineX() ) {<br>
+            // オフサイド位置であれば全力で戻る<br>
+            dash_power = ServerParam::i().maxPower();<br>
+          }<br>
+          else {<br>
+            // 通常時は回復量よりも大きいダッシュパワーで移動する<br>
+            dash_power = std::min( my_inc * 3,ServerParam::i().maxPower() );<br>
+          }<br>
+          return dash_power;<br>
+        }*/<br>
+
+
+        /*--------スコアが1点差の時の時間の使い方-------------*/<br>
       </td>
     </tr>
     <tr>
