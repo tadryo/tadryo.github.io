@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Programming</title>
+
+<script>
+var px, py;
+var vx, vy;
+var fx, fy;
+var dt;
+var bx;
+var by;
+var n;
+function start(){
+  bx = 20;
+  by = h-20;
+
+  px = new Array();
+  py = new Array();
+  vx = new Array();
+  vy = new Array();
+
+  n = 20;
+  for (var i=0;i<n;i++){
+  px.push(i*20 + 50);
+  py.push(h/2);
+  vx.push(0);
+  vy.push(0);
+  }
+  dt = 0.3;
+
+  mouseY = h/2;
+}
+
+function step() {
+  var i;
+  py[0] = mouseY;
+  py[n-1] = h/2; //py[n-2]; //自由端
+
+  for (i=1;i<(n-1);i++){
+  var dy1 = py[i]   - py[i-1];
+  var dy2 = py[i+1] - py[i];
+  var fy = dy2-dy1;
+  if (n==12){
+    fx *= 2;
+    }
+  vy[i] += fy*dt;
+  vy[i] = vy[i]*0.999;
+  }
+
+  g.clearRect(0,0,w,h);
+  for (i=0;i<n;i++){
+    py[i] += vy[i]*dt;
+
+    g.beginPath();
+    g.arc(px[i],py[i],10,0,2*Math.PI,1);
+    g.stroke();
+  }
+}
+</script>
+<style>
+#canvas{
+  margin:0;
+  background-color: ffffef;
+}
+</style>
+<script>
+var g;
+var w, h;
+function init(){
+  var c = document.getElementById("canvas");
+  w = c.width;
+  h = c.height;
+  g = c.getContext("2d");
+  start();
+  setInterval('step()', 50); //100mごとにstep()を呼び出す
+}
+
+var mouseX=0, mouseY=0;
+var mousebutton = false;
+document.onmousedown = function(e){
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  mousebutton = true;
+}
+document.onmousedown = function(e){
+  if (mousebutton){
+    mouseX = clientX;
+    mouseY = clientY;
+    }
+}
+document.onmousedown = function(e){
+  mousebutton = false;
+}
+</script>
+</head>
+<body onload="init()">
+<canvas id="canvas" width="500" height="300">
+</canvas>
+</body>
