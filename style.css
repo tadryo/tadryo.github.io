@@ -1,5 +1,5 @@
 title {
     padding-left: 30px;
     line-height: 30px;
-    background-image : url(tadryo_logo.png);
+    body { background-image: url(tadryo_logo.png);}
 }
