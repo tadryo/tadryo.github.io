@@ -1,7 +1,19 @@
 body {
-    background: #eeeeee;
-    font-family: 'IM Fell DW Pica SC', serif;
-  }
-.test {
-    font-size: 2em
-  }
+  background: #eeeeee;
+  font-family: 'IM Fell DW Pica SC', serif;
+}
+h2.tadryo {
+  font-size: 3em
+}
+h2.tadryo::before {
+  content:"";
+  display:inline-block;
+  width:1em;
+  height:1em;
+  background:url(tadryo_logo.png) no-repeat;
+  background-size:contain;
+}
+.padding{
+    border: 5px solid #aaa;
+    padding: 1px 500px;
+}
