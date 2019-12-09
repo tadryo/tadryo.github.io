@@ -1,8 +1,4 @@
-h1.tadryo.github.io::before {
-  content:"";
-  display:inline-block;
-  width:1em;
-  height:1em;
-  background:url(tadryo_logo.png) no-repeat;
-  background-size:contain;
-}
+body {
+    background: #eeeeee;
+    font-family: Meiryo;
+  }
