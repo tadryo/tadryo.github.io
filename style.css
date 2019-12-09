@@ -1,9 +1,3 @@
-title {
-    padding-left: 30px;
-    line-height: 30px;
-    body { background-image: url(tadryo_logo.png);}
-}
-
 h1.tadryo.github.io::before {
   content:"";
   display:inline-block;
