@@ -1,14 +1,13 @@
-
-body {
+body{
   background: #eeeeee;
   font-family: 'IM Fell DW Pica SC', serif;
   background-image: url(pic.jpg);
   background-size:  cover;
 }
-.tadryo {
+.tadryo{
   font-size: 3em
 }
-h2.tadryo::before {
+h2.tadryo::before{
   content:"";
   display:inline-block;
   width:1em;
@@ -19,4 +18,32 @@ h2.tadryo::before {
 }
 .center{
   text-align: center;
+}
+.URL{
+  background-color: rgba(255,255,0,0.1);
+  border: 1px solid #111;
+  list-style: none;
+  position: relative;
+  margin: 3em 0;
+  padding: 1.5em 1em;
+}
+.URL::before{
+  content: "一覧";
+    color: red;
+    background-color: white;
+    font-size: 1.2em;
+    position: absolute;
+    top: -1.2em;
+    left: 1em;
+    padding: 0 .5em;
+}
+.URL:after {
+    content: "tadryo";
+    color: #111;
+    background-color: #fff;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: -0.8em;
+    right: 1em;
+    padding: 0 .5em;
 }
