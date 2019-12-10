@@ -1,4 +1,4 @@
-// Še•Ï”‚Ì‰Šú‰»
+// ï¿½eï¿½Ïï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ï¿½
 let video;
 let poseNet;
 let poses = [];
@@ -34,14 +34,14 @@ let previousRightHandY = 0;
 
 let debug = false;
 
-// ‰¹º‚â‰æ‘œƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ‘œï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½Ì“Ç‚İï¿½ï¿½ï¿½
 function preload() {
 	sound = loadSound("normal.m4a");
 	sound2 = loadSound("bending.m4a");
 	guitar = loadImage("guitar.png");
 }
 
-// ƒy[ƒW‚ğŠJ‚¢‚½‚Æ‚«‚Éˆê“x‚¾‚¯Às‚·‚éˆ—
+// ï¿½yï¿½[ï¿½Wï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½Éˆï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½éˆï¿½ï¿½
 function setup() {
 	createCanvas(640, 480);
 	video = createCapture(VIDEO);
@@ -57,7 +57,7 @@ function setup() {
 	angleP = createP('Angle:');
 }
 
-// ’èŠú“I‚ÉŒJ‚è•Ô‚µÀs‚³‚ê‚éˆ—
+// ï¿½ï¿½ï¿½ï¿½ï¿½Iï¿½ÉŒJï¿½ï¿½ï¿½Ô‚ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½éˆï¿½ï¿½
 function draw() {
 	image(video, 0, 0);
 
@@ -73,7 +73,7 @@ function draw() {
 
 	let angle = atan2(leftHandY - bodyY, leftHandX - bodyX);
 
-	// ƒMƒ^[‚Ì‰æ‘œ‚ğ•\¦
+	// ï¿½Mï¿½^ï¿½[ï¿½Ì‰æ‘œï¿½ï¿½ï¿½\ï¿½ï¿½
 	const ratio = 2.5;
 	let guitar_width = dist(rightShoulderX, rightShoulderY, leftShoulderX, leftShoulderY) * ratio;
 
@@ -86,7 +86,7 @@ function draw() {
 	image(guitar, 0, 0, guitar_width, guitar.height * guitar_width / guitar.width);
 	pop();
 
-	// ‰Eèñ‚Ìc•ûŒü‚Ì‘¬“x‚ª10ˆÈã‚È‚çƒMƒ^[‰¹‚ğ–Â‚ç‚·
+	// ï¿½Eï¿½ï¿½ï¿½ï¿½ï¿½Ìcï¿½ï¿½ï¿½ï¿½ï¿½Ì‘ï¿½ï¿½xï¿½ï¿½10ï¿½Èï¿½ï¿½È‚ï¿½ï¿½Mï¿½^ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Â‚ç‚·
 	let v = rightHandY - previousRightHandY;
 	previousRightHandY = rightHandY;
 	const threshold = 10;
@@ -96,7 +96,7 @@ function draw() {
 		sound.play();
 	}
 
-	// ƒMƒ^[‚ğ—§‚Ä‚½‚Æ‚«‚ÉƒMƒ^[‰¹‚ğ•Ï‚¦‚é
+	// ï¿½Mï¿½^ï¿½[ï¿½ğ—§‚Ä‚ï¿½ï¿½Æ‚ï¿½ï¿½ÉƒMï¿½^ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½Ï‚ï¿½ï¿½ï¿½
 	const bending_angle = -30
 
 	if (angle < bending_angle && sound.isPlaying() && !sound2.isPlaying()) {
@@ -104,14 +104,14 @@ function draw() {
 		sound2.play();
 	}
 
-	// ƒfƒoƒbƒO—p
+	// ï¿½fï¿½oï¿½bï¿½Oï¿½p
 	if (debug) {
 
-		// ƒL[ƒ|ƒCƒ“ƒg‚âƒXƒPƒ‹ƒgƒ“‚Ì•\¦
+		// ï¿½Lï¿½[ï¿½|ï¿½Cï¿½ï¿½ï¿½gï¿½ï¿½ï¿½Xï¿½Pï¿½ï¿½ï¿½gï¿½ï¿½ï¿½Ì•\ï¿½ï¿½
 		drawKeypoints();
 		drawSkeleton();
 
-		// Šp“x‚Ì•\¦
+		// ï¿½pï¿½xï¿½Ì•\ï¿½ï¿½
 		if (angle < bending_angle) {
 			angleP.style("color", "red");
 		} else {
@@ -119,7 +119,7 @@ function draw() {
 		}
 		angleP.html(`Angle: ${round(angle)}`)
 
-		// ‰EèA¶è‚Ì—\‘ªˆÊ’u‚ÉÂŠÛ‚ğ•\¦
+		// ï¿½Eï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½Ì—\ï¿½ï¿½ï¿½Ê’uï¿½ÉÂŠÛ‚ï¿½ï¿½\ï¿½ï¿½
 		strokeWeight(4);
 		stroke(0, 0, 255);
 		line(leftWristX, leftWristY, leftHandX, leftHandY);
@@ -131,12 +131,12 @@ function draw() {
 	}
 }
 
-// PoseNetƒ‚ƒfƒ‹‚Ì“Ç‚İ‚İ‚ªŠ®—¹‚µ‚½‚Æ‚«‚ÉŒÄ‚Î‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
+// PoseNetï¿½ï¿½ï¿½fï¿½ï¿½ï¿½Ì“Ç‚İï¿½ï¿½İ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ‚ï¿½ï¿½ÉŒÄ‚Î‚ï¿½ï¿½ï¿½ï¿½Rï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½Öï¿½
 function modelLoaded() {
 	console.log('Model Loaded!');
 }
 
-// ƒ|[ƒY‚ª•Ï‚í‚é‚½‚Ñ‚ÉŒÄ‚Î‚ê‚éƒR[ƒ‹ƒoƒbƒNŠÖ”
+// ï¿½|ï¿½[ï¿½Yï¿½ï¿½ï¿½Ï‚ï¿½ï¿½é‚½ï¿½Ñ‚ÉŒÄ‚Î‚ï¿½ï¿½ï¿½ï¿½Rï¿½[ï¿½ï¿½ï¿½oï¿½bï¿½Nï¿½Öï¿½
 function gotPoses(results) {
 	poses = results;
 
@@ -191,7 +191,7 @@ function gotPoses(results) {
 	}
 }
 
-// ƒfƒoƒbƒOƒ‚[ƒhON/OFF‚ÌØ‚è‘Ö‚¦
+// ï¿½fï¿½oï¿½bï¿½Oï¿½ï¿½ï¿½[ï¿½hON/OFFï¿½ÌØ‚ï¿½ï¿½Ö‚ï¿½
 function toggleDebug() {
 	if (this.checked()) {
 		debug = true;
