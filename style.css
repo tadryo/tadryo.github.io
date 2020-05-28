@@ -1,49 +1,80 @@
 body{
-  background: #eeeeee;
   font-family: 'IM Fell DW Pica SC', serif;
-  background-image: url(pic.jpg);
-  background-size:  cover;
 }
-.tadryo{
+.title{
   font-size: 3em
-}
-h2.tadryo::before{
-  content:"";
-  display:inline-block;
-  width:1em;
-  height:1em;
-  background-size:contain;
-  background-image: url(tadryo_logo.png);
-  background-size:  50px;
 }
 .center{
   text-align: center;
 }
-.URL{
-  background-color: rgba(255,255,0,0.1);
-  border: 1px solid #111;
-  list-style: none;
-  position: relative;
-  margin: 3em 0;
-  padding: 1.5em 1em;
+ul.url {
+	position: relative;
+	padding: 0 0.5em;
+	margin-top: 2em;
+	list-style-type: none;
+	border: solid 2px #29B6F6;
 }
-.URL::before{
-  content: "一覧";
-    color: red;
-    background-color: white;
-    font-size: 1.2em;
-    position: absolute;
-    top: -1.2em;
-    left: 1em;
-    padding: 0 .5em;
+ul.url::after {
+	position: absolute;
+	content: "一覧表";
+	padding: 1px 7px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	font-size: .8em;
+	background: #29B6F6;
+	color: #fff;
+	bottom: 100%;
+	left: -2px;
+	border-radius: 4px 4px 0px 0px;
 }
-.URL:after {
-    content: "tadryo";
-    color: #111;
-    background-color: #fff;
-    font-size: 1.2em;
-    position: absolute;
-    bottom: -0.8em;
-    right: 1em;
-    padding: 0 .5em;
+ul.url li {
+	line-height: 1.5;
+	padding: 0.5em 0 0.5em 1.4em;
+	border-bottom: 1px dashed #81D4FA;
+}
+ul.url li::before {
+	position: absolute;
+	content: "
+ul.url {
+position: relative;
+padding: 0 0.5em;
+margin-top: 2em;
+list-style-type: none;
+border: solid 2px #29B6F6;
+}
+ul.url::after {
+position: absolute;
+content: "一覧表";
+padding: 1px 7px;
+letter-spacing: 0.05em;
+font-weight: bold;
+font-size: .8em;
+background: #29B6F6;
+color: #fff;
+bottom: 100%;
+left: -2px;
+border-radius: 4px 4px 0px 0px;
+}
+ul.url li {
+line-height: 1.5;
+padding: 0.5em 0 0.5em 1.4em;
+border-bottom: 1px dashed #81D4FA;
+}
+ul.url li::before {
+position: absolute;
+content: "\002713";
+color: #FF5722;
+font-weight: bold;
+left : 0.5em;
+}
+ul.url li:last-of-type {
+border-bottom: none;
+}
+2713";
+	color: #FF5722;
+	font-weight: bold;
+	left : 0.5em;
+}
+ul.url li:last-of-type {
+	border-bottom: none;
 }
