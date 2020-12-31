@@ -1,5 +1,6 @@
 var scene, renderer, camera, mesh, helper;
 var ready1 = false;
+
 var wordlist = ["apple", "banana", "orange", "grape", "kiwi"];
 var wordlistJapanese = ["リンゴ", "バナナ", "オレンジ", "ブドウ", "キウイ"]
 var time_limit = 30;
@@ -7,23 +8,25 @@ var readytime = 3;
 var score;
 var correct;
 var mistake;
-var char_num = 0; // ?
-var word_char; // ?
+var char_num = 0;
+var word_char;
 var random;
 
+// MMD
 //browser size
-const windowWidth = window.innerWidth;
+const windowWidth = window.innerWidth/2;
 const windowHeight = window.innerHeight;
 
 //Obujet Clock
 const clock = new THREE.Clock();
 
 
-const Pmx = "./pmx/pronama/kizunaai.pmx";
+const Pmx = "./pmx/Appearance_Teto_IS/Appearance_Teto_IS_1.0.5/Appearance_Teto_IS_1.0.5.pmx";
 const MotionObjects = [
   { id: "loop", VmdClip: null, AudioClip: false },
-  { id: "kei_voice_009_1", VmdClip: null, AudioClip: true },
-  { id: "kei_voice_010_2", VmdClip: null, AudioClip: true },
+  { id: "effort", VmdClip: null, AudioClip: true },
+  { id: "how", VmdClip: null, AudioClip: true },
+  { id: "problem", VmdClip: null, AudioClip: true }
 ];
 
 window.onload = () => {
@@ -44,13 +47,16 @@ Init = () => {
   const ambient = new THREE.AmbientLight(0xeeeeee);
   scene.add(ambient);
 
-  renderer = new THREE.WebGLRenderer({ alpha: true });
+  renderer = new THREE.WebGLRenderer({
+  	alpha: true
+  });
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(windowWidth, windowHeight);
   renderer.setClearColor(0xcccccc, 0);
 
-  // documentにMMDをセットする
+  // mmdにMMDをセットする
   document.body.appendChild(renderer.domElement);
+  document.getElementById("mmd").appendChild(renderer.domElement);
 
   //cameraの作成
   camera = new THREE.PerspectiveCamera(40, windowWidth / windowHeight, 1, 1000);
@@ -175,8 +181,6 @@ VmdControl = (id, loop) => {
   ready1 = true;
 }
 
-
-
 /*
  * Loading PMX or VMD or Voice
  */
@@ -207,30 +211,9 @@ Render = () => {
   }
 }
 
-/*
- * Click Event
- */
-PoseClickEvent = (id) => {
-  switch (id) {
-    case "pose1":
-      VmdControl("loop", true);
-      break;
-
-    case "pose2":
-      VmdControl("kei_voice_009_1", false);
-      break;
-
-    case "pose3":
-      VmdControl("kei_voice_010_2", false);
-      break;
-
-    default:
-      VmdControl("loop", true);
-      break;
-  }
-}
-
+// Typing
 function ready2() {
+	VmdControl("effort", false);
     readytime = 3;
     scoredis.innerHTML = "";
     start_button.style.visibility = "hidden";
@@ -268,7 +251,7 @@ function charInsort() {
     word_char = wordlist[random].charAt(char_num);
 }
 function finish() {
-    score = Math.floor(Math.pow(correct, 2) * Math.pow((correct / (correct + mistake)), 5));
+    score = correct - mistake*0.5;
     scoredis.innerHTML = "スコア:" + score + "点" + "<hr>正タイプ数:" + correct + "<br>ミスタイプ数:" + mistake + "<br>正答率" + (correct / (correct + mistake) * 100).toFixed(1) + "%";
     count.innerHTML = "";
     word.innerHTML = "";
@@ -277,6 +260,7 @@ function finish() {
     word_char = 0;
     random = 0;
     char_num = 0;
+    window.setTimeout('VmdControl("how", false);', 3000);
 }
 document.onkeydown = function(e) {
     if (e.keyCode == 189) {
@@ -293,6 +277,7 @@ document.onkeydown = function(e) {
         correct++;
         charInsort();
     } else {
+    	VmdControl("problem", false);
         mistake++;
     }
     if (char_num == wordlist[random].length) {

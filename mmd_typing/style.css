@@ -1,3 +1,10 @@
-.wrap{
-     text-align:center;
+body{
+	display: flex;
+}
+.typing{
+	width: 50%;
+	text-align: center;
+}
+#mmd{
+	width: 50%;
 }
