@@ -1,10 +1,10 @@
 var scene, renderer, camera, mesh, helper;
-var ready1 = false;
+var ready_mmd = false;
 
-var wordlist = ["apple", "banana", "orange", "grape", "kiwi"];
-var wordlistJapanese = ["リンゴ", "バナナ", "オレンジ", "ブドウ", "キウイ"]
-var time_limit = 30;
-var readytime = 3;
+var wordlist = ["kamadotanjiro","kamadonezuko","agatsumazenitsu","hashibirainosuke","tsuyurikanao","shinazugawagenya","tomiokagiyu","rengokukyojuro","uzuitengen","tokitomuichiro","kochoshinobu","iguroobanai","kanrojimitsuri","himejimagyomei","shinazugawasanemi","ubuyashikikagaya","ubuyashikiamane","ubuyashikikiriya","ubuyashikikanata","kanzakiaoi","urokodakisakonji","haganezukahotaru","kuwajimajigoro","sabito","makomo","kamadotanjuro","kochokanae","rengokushinjuro","rengokuruka","rengokusenjuro","makiwo","suma","hinatsuru","goto","tetchikawaharatetchin","kotetsu","kotoha","kibutsujimuzan","kokushibo","doma","akaza","hantengu","gyokko","gyutaro","daki","nakime","kaigaku","enmu","rui","tamayo","yushiro"]
+var wordlistJapanese = ["かまど たんじろう","かまど ねずこ","あがつま ぜんいつ","はしびら いのすけ","つゆり かなお","しなずがわ げんや","とみおか ぎゆう","れんごく きょうじゅろう","うずい てんげん","ときとう むいちろう","こちょう しのぶ","いぐろ おばない","かんろじ みつり","ひめじま ぎょうめい","しなずがわ さねみ","うぶやしき かがや","うぶやしき あまね","うぶやしき きりや","うぶやしき かなた","かんざき あおい","うろこだき さこんじ","はがねづか ほたる","くわじま じごろう","さびと","まこも","かまど たんじゅうろう","こちょう かなえ","れんごく しんじゅろう","れんごく るか","れんごく せんじゅろう","","すま","ひなつる","ごとう","てっちかわはら てっちん","こてつ","ことは","きぶつじむざん","こくしぼう","どうま","あかざ","はんてんぐ","ぎょっこ","ぎゅうたろう","だき","なきめ","かいがく","えんむ","るい","たまよ","ゆしろう"]
+var wordlistKanji = ["竈門 炭治郎","竈門 禰豆子","我妻 善逸","嘴平 伊之助","栗花落 カナヲ","不死川 玄弥","冨岡 義勇","煉獄 杏寿郎","宇髄 天元","時透 無一郎","胡蝶 しのぶ","伊黒 小芭内","甘露寺 蜜璃","悲鳴嶼 行冥","不死川 実弥","産屋敷 耀哉","産屋敷 あまね","産屋敷 輝利哉","産屋敷 かなた","神崎 アオイ","鱗滝 左近次","鋼鐵塚 蛍","桑島 慈悟郎","錆兎","真菰","竈門 炭十郎","胡蝶 カナエ","煉獄 槇寿郎","煉獄 瑠火","煉獄 千寿郎","まきを","須磨","雛鶴","後藤","鉄地河原 鉄珍","小鉄","琴葉","鬼舞辻無惨","黒死牟","童磨","猗窩座","半天狗","玉壺","妓夫太郎","堕姫","鳴女","獪岳","魘夢","累","珠世","愈史郎"]
+var time_limit = 10;
 var score;
 var correct;
 var mistake;
@@ -147,7 +147,7 @@ VmdControl = (id, loop) => {
     return;
   }
 
-  ready1 = false;
+  ready_mmd = false;
   helper = new THREE.MMDAnimationHelper({ afterglow: 2.0, resetPhysicsOnLoop: true });
 
   // 
@@ -178,7 +178,7 @@ VmdControl = (id, loop) => {
     VmdControl("loop", true);
   });
 
-  ready1 = true;
+  ready_mmd = true;
 }
 
 /*
@@ -206,13 +206,13 @@ Render = () => {
   renderer.clear();
   renderer.render(scene, camera);
 
-  if (ready1) {
+  if (ready_mmd) {
     helper.update(clock.getDelta());
   }
 }
 
 // Typing
-function ready2() {
+function ready_typing() {
 	VmdControl("effort", false);
     readytime = 3;
     scoredis.innerHTML = "";
@@ -233,7 +233,7 @@ function gameStart() {
     wordDisplay();
     var time_remaining = time_limit;
     var gametimer = setInterval(function() {
-        count.innerHTML = "残り時間：" + time_remaining;
+        count.innerHTML = "残り時間：" + time_remaining + "秒";
         time_remaining--;
         if (time_remaining < 0) {
             clearInterval(gametimer);
@@ -245,17 +245,19 @@ function wordDisplay() {
     random = Math.floor(Math.random() * wordlist.length);
     word.innerHTML = wordlist[random];
     japanese.innerHTML = wordlistJapanese[random];
+    kanji.innerHTML = wordlistKanji[random];
     charInsort();
 }
 function charInsort() {
     word_char = wordlist[random].charAt(char_num);
 }
 function finish() {
-    score = correct - mistake*0.5;
-    scoredis.innerHTML = "スコア:" + score + "点" + "<hr>正タイプ数:" + correct + "<br>ミスタイプ数:" + mistake + "<br>正答率" + (correct / (correct + mistake) * 100).toFixed(1) + "%";
+    score = correct-mistake;
+    scoredis.innerHTML = "スコア:" + score + "点" + "<hr>正しく打てた回数:" + correct + "<br>間違えた回数:" + mistake + "<br>正答率" + (correct / (correct + mistake) * 100).toFixed(1) + "%";
     count.innerHTML = "";
     word.innerHTML = "";
     japanese.innerHTML = "";
+    kanji.innerHTML = "";
     start_button.style.visibility = "visible";
     word_char = 0;
     random = 0;

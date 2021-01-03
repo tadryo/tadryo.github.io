@@ -8,3 +8,9 @@ body{
 #mmd{
 	width: 50%;
 }
+#start_button{
+	background-color: #b80100;
+	width: 100px;
+	height: 50px;
+	font-size: 30px;
+}
