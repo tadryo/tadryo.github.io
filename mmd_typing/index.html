@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <title>SampleMMDタイピングゲーム</title>
+	    <title>MMDタイピングゲーム</title>
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link rel="stylesheet" type="text/css" href="style.css" title=default>
 	</head>
 	<body>
 	    <div class="typing">
-	        <input type="button" id="start_button" value="start" onclick="ready_typing()">
+	        <input type="button" class="button" id="start1" value="最終選別(さいしゅうせんべつ)" onclick="ready_typing1()">
+	        <input type="button" class="button" id="start2" value="甲(きのえ)" onclick="ready_typing2()">
+	        <input type="button" class="button" id="start3" value="柱(はしら)" onclick="ready_typing3()">
 	        <div id="count"></div>
 	        <h3>
 	            <div id="japanese"></div>
@@ -16,9 +18,9 @@
 	        <h1>
 	        	<div id="kanji"></div>
 	        </h1>
-	        <h2>
+	        <h1>
 	            <div id="word"></div>
-	        </h2>
+	        </h1>
 	        <div id="scoredis"></div>
 	    </div>
 	    <div id="mmd">
