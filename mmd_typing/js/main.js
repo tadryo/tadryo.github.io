@@ -4,7 +4,7 @@ var ready_mmd = false;
 var wordlist = ["kamadotanjiro","kamadonezuko","agatsumazenitsu","hashibirainosuke","tsuyurikanao","shinazugawagenya","tomiokagiyu","rengokukyojuro","uzuitengen","tokitomuichiro","kochoshinobu","iguroobanai","kanrojimitsuri","himejimagyomei","shinazugawasanemi","ubuyashikikagaya","ubuyashikiamane","ubuyashikikiriya","ubuyashikikanata","kanzakiaoi","urokodakisakonji","haganezukahotaru","kuwajimajigoro","sabito","makomo","kamadotanjuro","kochokanae","rengokushinjuro","rengokuruka","rengokusenjuro","makiwo","suma","hinatsuru","goto","tetchikawaharatetchin","kotetsu","kotoha","kibutsujimuzan","kokushibo","doma","akaza","hantengu","gyokko","gyutaro","daki","nakime","kaigaku","enmu","rui","tamayo","yushiro"]
 var wordlistJapanese = ["かまど たんじろう","かまど ねずこ","あがつま ぜんいつ","はしびら いのすけ","つゆり かなお","しなずがわ げんや","とみおか ぎゆう","れんごく きょうじゅろう","うずい てんげん","ときとう むいちろう","こちょう しのぶ","いぐろ おばない","かんろじ みつり","ひめじま ぎょうめい","しなずがわ さねみ","うぶやしき かがや","うぶやしき あまね","うぶやしき きりや","うぶやしき かなた","かんざき あおい","うろこだき さこんじ","はがねづか ほたる","くわじま じごろう","さびと","まこも","かまど たんじゅうろう","こちょう かなえ","れんごく しんじゅろう","れんごく るか","れんごく せんじゅろう","","すま","ひなつる","ごとう","てっちかわはら てっちん","こてつ","ことは","きぶつじむざん","こくしぼう","どうま","あかざ","はんてんぐ","ぎょっこ","ぎゅうたろう","だき","なきめ","かいがく","えんむ","るい","たまよ","ゆしろう"]
 var wordlistKanji = ["竈門 炭治郎","竈門 禰豆子","我妻 善逸","嘴平 伊之助","栗花落 カナヲ","不死川 玄弥","冨岡 義勇","煉獄 杏寿郎","宇髄 天元","時透 無一郎","胡蝶 しのぶ","伊黒 小芭内","甘露寺 蜜璃","悲鳴嶼 行冥","不死川 実弥","産屋敷 耀哉","産屋敷 あまね","産屋敷 輝利哉","産屋敷 かなた","神崎 アオイ","鱗滝 左近次","鋼鐵塚 蛍","桑島 慈悟郎","錆兎","真菰","竈門 炭十郎","胡蝶 カナエ","煉獄 槇寿郎","煉獄 瑠火","煉獄 千寿郎","まきを","須磨","雛鶴","後藤","鉄地河原 鉄珍","小鉄","琴葉","鬼舞辻無惨","黒死牟","童磨","猗窩座","半天狗","玉壺","妓夫太郎","堕姫","鳴女","獪岳","魘夢","累","珠世","愈史郎"]
-var time_limit = 10;
+var time_limit = 60;
 var score;
 var correct;
 var mistake;
