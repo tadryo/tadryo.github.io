@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>もしもしタイピング大丈夫ですか？</title>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" type="text/css" href="style.css" title=default>
+	</head>
+	<body>
+	    <div class="typing">
+	        <input type="button" class="button" id="start1" value="最終選別(さいしゅうせんべつ)" onclick="ready_typing1()">
+	        <input type="button" class="button" id="start2" value="甲(きのえ)" onclick="ready_typing2()">
+	        <input type="button" class="button" id="start3" value="柱(はしら)" onclick="ready_typing3()">
+	        <div id="count"></div>
+	        <h3>
+	            <div id="japanese"></div>
+	        </h3>
+	        <h1>
+	        	<div id="kanji"></div>
+	        </h1>
+	        <h1>
+	            <div id="word"></div>
+	        </h1>
+	        <div id="scoredis"></div>
+	    </div>
+	    <div id="mmd">
+	    </div>
+  		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/build/three.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/libs/mmdparser.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/ammo.js@0.0.10/ammo.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/loaders/TGALoader.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/loaders/MMDLoader.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/animation/MMDAnimationHelper.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/effects/OutlineEffect.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/animation/CCDIKSolver.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r106/examples/js/animation/MMDPhysics.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
+

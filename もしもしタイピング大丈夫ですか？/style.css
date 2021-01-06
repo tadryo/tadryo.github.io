@@ -1,0 +1,22 @@
+body{
+	display: flex;
+	background-color: #ffffa3;
+}
+.typing{
+	width: 50%;
+	text-align: center;
+	font-size: 30px;
+}
+#mmd{
+	width: 50%;
+}
+.button{
+	background-color: #ed6d35;
+	width: 700px;
+	height: 70px;
+	margin: 2% 0%;
+	font-size: 50px;
+}
+#count{
+	font-size: 50px;
+}

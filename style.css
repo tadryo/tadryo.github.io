@@ -1,0 +1,80 @@
+body{
+  font-family: 'IM Fell DW Pica SC', serif;
+}
+.title{
+  font-size: 3em
+}
+.center{
+  text-align: center;
+}
+ul.url {
+	position: relative;
+	padding: 0 0.5em;
+	margin-top: 2em;
+	list-style-type: none;
+	border: solid 2px #29B6F6;
+}
+ul.url::after {
+	position: absolute;
+	content: "一覧表";
+	padding: 1px 7px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	font-size: .8em;
+	background: #29B6F6;
+	color: #fff;
+	bottom: 100%;
+	left: -2px;
+	border-radius: 4px 4px 0px 0px;
+}
+ul.url li {
+	line-height: 1.5;
+	padding: 0.5em 0 0.5em 1.4em;
+	border-bottom: 1px dashed #81D4FA;
+}
+ul.url li::before {
+	position: absolute;
+	content: "
+ul.url {
+position: relative;
+padding: 0 0.5em;
+margin-top: 2em;
+list-style-type: none;
+border: solid 2px #29B6F6;
+}
+ul.url::after {
+position: absolute;
+content: "一覧表";
+padding: 1px 7px;
+letter-spacing: 0.05em;
+font-weight: bold;
+font-size: .8em;
+background: #29B6F6;
+color: #fff;
+bottom: 100%;
+left: -2px;
+border-radius: 4px 4px 0px 0px;
+}
+ul.url li {
+line-height: 1.5;
+padding: 0.5em 0 0.5em 1.4em;
+border-bottom: 1px dashed #81D4FA;
+}
+ul.url li::before {
+position: absolute;
+content: "\002713";
+color: #FF5722;
+font-weight: bold;
+left : 0.5em;
+}
+ul.url li:last-of-type {
+border-bottom: none;
+}
+2713";
+	color: #FF5722;
+	font-weight: bold;
+	left : 0.5em;
+}
+ul.url li:last-of-type {
+	border-bottom: none;
+}
