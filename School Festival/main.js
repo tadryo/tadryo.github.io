@@ -1,7 +1,6 @@
 let name = document.getElementById('name');
+let score = document.getElementById('score');
 let text = document.getElementById('text');
-let check = document.getElementById('check');
-check.addEventListener('click', butotnClick);
 function butotnClick(){
-  text.innerText = 'お名前は' + name.value + 'さんですね';
+  text.innerText = '名前：' + name.value + '　スコア：' + score.value;
 }
