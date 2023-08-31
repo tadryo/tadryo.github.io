@@ -8,18 +8,18 @@ function butotnClick(){
   second = document.getElementById('second');
   third = document.getElementById('third');
   if (max < parseInt(score2.value)) {
-    first.innerText = score1.value + '　スコア：' + score2.value;
-    second.innerText = max_name + '　スコア：' + max;
-    third.innerText = middle_name + '　スコア：' + middle;
+    first.innerText = score1.value + ' スコア：' + score2.value;
+    second.innerText = max_name + ' スコア：' + max;
+    third.innerText = middle_name + ' スコア：' + middle;
     max = parseInt(score2.value);
     max_name = score1.value;
   } else if (middle < parseInt(score2.value)) {
-    second.innerText = score1.value + '　スコア：' + score2.value;
-    third.innerText = min_name + '　スコア：' + middle;
+    second.innerText = score1.value + ' スコア：' + score2.value;
+    third.innerText = min_name + ' スコア：' + middle;
     middle = parseInt(score2.value);
     middle_name = score1.value;
   } else if (min < parseInt(score2.value)) {
-    third.innerText = score1.value + '　スコア：' + score2.value;
+    third.innerText = score1.value + ' スコア：' + score2.value;
     min = parseInt(score2.value);
     min_name = score1.value;
   }
