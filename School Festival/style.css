@@ -3,12 +3,11 @@ body {
 }
 .title {
      display:flex;
-     align-items: center;
+     margin: 0 auto;
 }
 #title {
      font-size: 200px;
      margin: 0;
-     text-align: center;
 }
 #title::before {
      content: url('g-menu_off.png');
