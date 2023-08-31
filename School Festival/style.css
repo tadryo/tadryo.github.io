@@ -16,6 +16,7 @@
 }
 .ranking {
      counter-reset: rank;
+     font-size: 100px
 }
 .ranking li::before {
   counter-increment: rank;
