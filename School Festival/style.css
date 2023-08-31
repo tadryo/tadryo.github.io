@@ -1,3 +1,6 @@
-h1{
+#title{
     color: red; 
+}
+#title:before {
+  content: url('g-menu_off.png');
 }
