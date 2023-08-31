@@ -22,7 +22,24 @@
 .ranking {
      counter-reset: rank;
 }
-
+.ranking li::nth-child(-n + 3)::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f521";
+  font-weight: 900;
+  position: absolute;
+  top: -45px;
+  left: -20px;
+  font-size: 80px;
+}
+.ranking li:nth-child(1)::before {
+     color: #e6c300;
+}
+.ranking li:nth-child(2)::before {
+     color: #a9a9a9;
+}
+.ranking li:nth-child(3)::before {
+     color: #815a2b;
+}
 .ranking li::after {
      counter-increment: rank;
      content: counter(rank) "位";
