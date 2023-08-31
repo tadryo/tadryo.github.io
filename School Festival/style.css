@@ -19,3 +19,11 @@
 #ta {
     color: red;
 }
+.ranking {
+  counter-reset: rank;
+}
+.ranking li::before {
+  counter-increment: rank;
+  content: counter(rank) "位";
+  padding-right: 10px;
+}
