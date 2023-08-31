@@ -1,6 +1,12 @@
-#title{
-    color: red; 
-}
 #title:before {
-  content: url('g-menu_off.png');
+    content: url('g-menu_off.png');
+}
+#gi {
+    color: yellow;
+}
+#bar {
+    color: green;
+}
+#ta {
+    color: red;
 }
