@@ -1,7 +1,6 @@
 function butotnClick(){
-  name = document.getElementById('name');
-  score = document.getElementById('score');
+  score1 = document.getElementById('score1');
+  score2 = document.getElementById('score2');
   text = document.getElementById('text');
-  console.log(name);
-  text.innerText = '名前：' + name.value + '　スコア：' + score.value;
+  text.innerText = 'スコア1：' + score1.value + '　スコア2：' + scor2e.value;
 }
