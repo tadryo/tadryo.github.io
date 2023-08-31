@@ -1,23 +1,28 @@
+body {
+     background-color: #e1dfdf;
+}
 #title {
      font-size: 200px;
      margin: 0;
+     text-align: center;
 }
 #title::before {
      content: url('g-menu_off.png');
 }
 #gi {
-    color: yellow;
+     color: yellow;
 }
 #bar {
-    color: green;
+     color: green;
 }
 #ta {
-    color: red;
+     color: red;
 }
 .ranking {
      list-style: none;
      font-size: 100px;
      margin: 0;
+     text-align: center;
 }
 #first::before {
      content: url('f5-1.png');
