@@ -20,10 +20,12 @@
     color: red;
 }
 .ranking {
-  counter-reset: rank;
+     counter-reset: rank;
 }
-.ranking li::before {
-  counter-increment: rank;
-  content: counter(rank) "位";
-  padding-right: 10px;
+
+.ranking li::after {
+     counter-increment: rank;
+     content: counter(rank) "位";
+     padding-right: 10px;
+     color: #fff;
 }
