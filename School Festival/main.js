@@ -9,13 +9,13 @@ function butotnClick(){
   console.log(score1.value);
   console.log(score2.value);
   if (max < score2.value) {
-    max = score2;
+    max = score2.value;
     first.innerText = '名前：' + score1.value + '　スコア：' + score2.value;
   } else if (middle < score2.value) {
-    middle = score2;
+    middle = score2.value;
     second.innerText = '名前：' + score1.value + '　スコア：' + score2.value;
   } else if (min < score2.value) {
-    min = score2;
+    min = score2.value;
     third.innerText = '名前：' + score1.value + '　スコア：' + score2.value;
   }
 }
