@@ -22,5 +22,7 @@ function butotnClick(){
     third.innerText = score1.value + ' スコア：' + score2.value;
     min = parseInt(score2.value);
     min_name = score1.value;
+  } else {
+
   }
 }
