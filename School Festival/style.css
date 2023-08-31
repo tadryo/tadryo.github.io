@@ -1,5 +1,6 @@
 #title {
      font-size: 300px;
+     margin: 0;
 }
 #title::before {
      content: url('g-menu_off.png');
