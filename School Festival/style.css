@@ -2,9 +2,13 @@
      font-size: 500px;
 }
 #title:before {
-    content: url('g-menu_off.png');
-    height: 1000%;
-    width: 1000%;
+     content: "";
+     display: inline-block;
+     height: 1000%;
+     width: 1000%;
+     background-image: url('g-menu_off.png');
+     background-size: contain;
+     vertical-align: middle;
 }
 #gi {
     color: yellow;
