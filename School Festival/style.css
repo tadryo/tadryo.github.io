@@ -19,9 +19,13 @@
      counter-reset: rank;
      font-size: 100px
 }
-.ranking li::before {
-  counter-increment: rank;
-  content: counter(rank) "位";
-  padding-right: 10px;
+#first::before {
+     content: url('f5-1.png');
+}
+#second::before {
+     content: url('f5-2.png');
+}
+#third::before {
+     content: url('f5-3.png');
 }
 */
