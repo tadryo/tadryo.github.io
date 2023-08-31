@@ -1,6 +1,10 @@
 body {
      background-color: #e1dfdf;
 }
+.title {
+     display:flex;
+     align-items: center;
+}
 #title {
      font-size: 200px;
      margin: 0;
