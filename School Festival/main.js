@@ -6,6 +6,7 @@ function butotnClick(){
   first = document.getElementById('first');
   second = document.getElementById('second');
   third = document.getElementById('third');
+  console.log(score2.value);
   if (max < score2.value) {
     console.log(1);
     max = score2.value;
