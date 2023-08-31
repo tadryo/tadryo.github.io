@@ -1,5 +1,10 @@
+#title {
+     font-size: 50px;
+}
 #title:before {
     content: url('g-menu_off.png');
+    height: 200%;
+    width: 200%;
 }
 #gi {
     color: yellow;
