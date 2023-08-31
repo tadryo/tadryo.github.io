@@ -4,5 +4,5 @@ function butotnClick(){
   text = document.getElementById('text');
   console.log(score1);
   console.log(score2);
-  text.innerText = 'スコア1：' + score1.value + '　スコア2：' + scor2e.value;
+  text.innerText = 'スコア1：' + score1.value + '　スコア2：' + scor2.value;
 }
