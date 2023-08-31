@@ -12,7 +12,7 @@
      vertical-align: middle;
 }
 */
-#titl::before {
+#title::before {
      content: url('g-menu_off.png');
 }
 #gi {
