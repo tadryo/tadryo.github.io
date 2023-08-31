@@ -14,10 +14,10 @@
 #ta {
     color: red;
 }
-/*
 .ranking {
-     counter-reset: rank;
-     font-size: 100px
+     list-style: none;
+     font-size: 100px;
+     margin: 0;
 }
 #first::before {
      content: url('f5-1.png');
@@ -28,4 +28,3 @@
 #third::before {
      content: url('f5-3.png');
 }
-*/
