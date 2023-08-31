@@ -37,10 +37,12 @@ body {
      text-align: center;
 }
 #score1 {
+     font-size: 30px;
      padding: 10px;
-     line-height: 1;
+     line-height: 0.5;
 }
 #score2 {
+     font-size: 20px;
      padding: 10px;
-     line-height: 1;
+     line-height: 0.5;
 }
