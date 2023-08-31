@@ -1,17 +1,6 @@
 #title {
      font-size: 300px;
 }
-/*
-#title:before {
-     content: "";
-     display: inline-block;
-     height: 100%;
-     width: 100%;
-     background-image: url('g-menu_off.png');
-     background-size: contain;
-     vertical-align: middle;
-}
-*/
 #title::before {
      content: url('g-menu_off.png');
 }
