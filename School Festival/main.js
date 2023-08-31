@@ -7,8 +7,7 @@ function butotnClick(){
   second = document.getElementById('second');
   third = document.getElementById('third');
   console.log(score2.value);
-  if (200 < score2.value) {
-    console.log(1);
+  if (max < score2.value) {
     max = score2.value;
     first.innerText = '名前：' + score1.value + '　スコア：' + score2.value;
     console.log(max,middle,min);
