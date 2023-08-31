@@ -12,7 +12,7 @@ function butotnClick(){
   } else if (middle < parseInt(score2.value)) {
     middle = parseInt(score2.value);
     second.innerText = '名前：' + score1.value + '　スコア：' + score2.value;
-  } else if (middle < parseInt(score2.value)) {
+  } else if (min < parseInt(score2.value)) {
     min = parseInt(score2.value);
     third.innerText = '名前：' + score1.value + '　スコア：' + score2.value;
   }
