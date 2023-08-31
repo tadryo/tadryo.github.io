@@ -19,7 +19,6 @@ body {
      color: red;
 }
 .ranking {
-     list-style: none;
      font-size: 100px;
      margin: 0;
      text-align: center;
@@ -32,4 +31,8 @@ body {
 }
 #third::before {
      content: url('f5-3.png');
+}
+.input {
+     font-size: 50px;
+     text-align: center;
 }
