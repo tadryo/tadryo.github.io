@@ -8,7 +8,6 @@ function butotnClick(){
   first = document.getElementById('first');
   second = document.getElementById('second');
   third = document.getElementById('third');
-  console.log(max, middle, min);
   if (max < parseInt(score2.value)) {
     music.play();
     first.innerText = score1.value + ' スコア：' + parseInt(score2.value);
@@ -30,4 +29,5 @@ function butotnClick(){
   } else {
 
   }
+  console.log(max, middle, min);
 }
