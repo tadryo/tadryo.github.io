@@ -10,9 +10,9 @@ function butotnClick(){
   third = document.getElementById('third');
   if (max < parseInt(score2.value)) {
     music.play();
-    first.innerText = score1.value + ' スコア：' + parseInt(score2.value);
-    second.innerText = max_name + ' スコア：' + max;
-    third.innerText = middle_name + ' スコア：' + middle;
+    first.innerText = score1.value + '　スコア：' + parseInt(score2.value);
+    second.innerText = max_name + '　スコア：' + max;
+    third.innerText = middle_name + '　スコア：' + middle;
     min = middle;
     min_name = middle_name;
     middle = max;
@@ -21,15 +21,15 @@ function butotnClick(){
     max_name = score1.value;
   } else if (middle < parseInt(score2.value)) {
     music.play();
-    second.innerText = score1.value + ' スコア：' + parseInt(score2.value);
-    third.innerText = middle_name + ' スコア：' + middle;
+    second.innerText = score1.value + '　スコア：' + parseInt(score2.value);
+    third.innerText = middle_name + '　スコア：' + middle;
     min = middle;
     min_name = middle_name;
     middle = parseInt(score2.value);
     middle_name = score1.value;
   } else if (min < parseInt(score2.value)) {
     music.play();
-    third.innerText = score1.value + ' スコア：' + parseInt(score2.value);
+    third.innerText = score1.value + '　スコア：' + parseInt(score2.value);
     min = parseInt(score2.value);
     min_name = score1.value;
   } else {
