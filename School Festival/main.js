@@ -13,12 +13,18 @@ function butotnClick(){
     first.innerText = score1.value + ' スコア：' + parseInt(score2.value);
     second.innerText = max_name + ' スコア：' + max;
     third.innerText = middle_name + ' スコア：' + middle;
+    min = middle;
+    min_name = middle_name;
+    middle = max;
+    middle_name = max_name;
     max = parseInt(score2.value);
     max_name = score1.value;
   } else if (middle < parseInt(score2.value)) {
     music.play();
     second.innerText = score1.value + ' スコア：' + parseInt(score2.value);
-    third.innerText = min_name + ' スコア：' + middle;
+    third.innerText = middle_name + ' スコア：' + middle;
+    min = middle;
+    min_name = middle_name;
     middle = parseInt(score2.value);
     middle_name = score1.value;
   } else if (min < parseInt(score2.value)) {
