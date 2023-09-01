@@ -10,17 +10,20 @@ function butotnClick(){
   third = document.getElementById('third');
   console.log(max, middle, min);
   if (max < parseInt(score2.value)) {
+    music.play();
     first.innerText = score1.value + ' スコア：' + parseInt(score2.value);
     second.innerText = max_name + ' スコア：' + max;
     third.innerText = middle_name + ' スコア：' + middle;
     max = parseInt(score2.value);
     max_name = score1.value;
   } else if (middle < parseInt(score2.value)) {
+    music.play();
     second.innerText = score1.value + ' スコア：' + parseInt(score2.value);
     third.innerText = min_name + ' スコア：' + middle;
     middle = parseInt(score2.value);
     middle_name = score1.value;
   } else if (min < parseInt(score2.value)) {
+    music.play();
     third.innerText = score1.value + ' スコア：' + parseInt(score2.value);
     min = parseInt(score2.value);
     min_name = score1.value;
