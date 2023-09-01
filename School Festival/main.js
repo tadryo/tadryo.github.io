@@ -1,6 +1,7 @@
 var max = 0, middle = 0, min = 0;
 var max_name = "？？？？？", middle_name = "？？？？？", min_name = "？？？？？";
-const music = new Audio('win.mp3');
+const win = new Audio('win.mp3');
+const lose = new Audio('lose.mp3');
 
 function butotnClick(){
   score1 = document.getElementById('score1');
@@ -9,7 +10,7 @@ function butotnClick(){
   second = document.getElementById('second');
   third = document.getElementById('third');
   if (max < parseInt(score2.value)) {
-    music.play();
+    win.play();
     first.innerText = score1.value + '　スコア：' + parseInt(score2.value);
     second.innerText = max_name + '　スコア：' + max;
     third.innerText = middle_name + '　スコア：' + middle;
@@ -20,7 +21,7 @@ function butotnClick(){
     max = parseInt(score2.value);
     max_name = score1.value;
   } else if (middle < parseInt(score2.value)) {
-    music.play();
+    win.play();
     second.innerText = score1.value + '　スコア：' + parseInt(score2.value);
     third.innerText = middle_name + '　スコア：' + middle;
     min = middle;
@@ -28,12 +29,12 @@ function butotnClick(){
     middle = parseInt(score2.value);
     middle_name = score1.value;
   } else if (min < parseInt(score2.value)) {
-    music.play();
+    win.play();
     third.innerText = score1.value + '　スコア：' + parseInt(score2.value);
     min = parseInt(score2.value);
     min_name = score1.value;
   } else {
-
+    lose.play();
   }
   console.log(max, middle, min);
 }
