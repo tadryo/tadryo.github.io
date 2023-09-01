@@ -1,5 +1,6 @@
 var max = 0, middle = 0, min = 0;
 var max_name = "？？？？？", middle_name = "？？？？？", min_name = "？？？？？";
+const music = new Audio('win.mp3');
 
 function butotnClick(){
   score1 = document.getElementById('score1');
