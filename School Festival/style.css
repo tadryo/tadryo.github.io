@@ -28,12 +28,15 @@ body {
 }
 #first::before {
      content: url('f5-1.png');
+     padding: 50px;
 }
 #second::before {
      content: url('f5-2.png');
+     padding: 50px;
 }
 #third::before {
      content: url('f5-3.png');
+     padding: 50px;
 }
 .input {
      font-size: 50px;
